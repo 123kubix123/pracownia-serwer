@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>serwer</class>
+ <widget class="QWidget" name="serwer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pracownia Serwer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/loga/logo_small.png</normaloff>:/loga/logo_small.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_4">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="Line" name="line">
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="autoryzuj">
+            <property name="text">
+             <string>Autoryzuj</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_6">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="siecl">
+            <property name="text">
+             <string>Wybierz sieć:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="siec">
+            <property name="toolTip">
+             <string>Lista znalezionych sieci</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="znajdz">
+            <property name="toolTip">
+             <string>Wyszukaj komputery w wybranej sieci (używa ssh)</string>
+            </property>
+            <property name="text">
+             <string>Znajdź dostępne komputery</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="wybierzl">
+            <property name="text">
+             <string>Wybierz komputer:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="wybierz">
+            <property name="toolTip">
+             <string>Lista znalezionych komputerów</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="kopiuj">
+            <property name="toolTip">
+             <string>Kopiuj strukturę/zmiany z wybranego komputera na serwer (używa rsync)</string>
+            </property>
+            <property name="text">
+             <string>Kopiuj z wybranego komputera</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_2">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="connected">
+            <property name="text">
+             <string>Podłączone komputery:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="clients">
+            <property name="toolTip">
+             <string>Lista podłączonych klientów</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="Synchronizuj">
+              <property name="toolTip">
+               <string>Wysyła polecenie synchronizacji zmian struktury do wybranego klienta</string>
+              </property>
+              <property name="text">
+               <string>Synchronizuj</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="wykonaj_komende">
+              <property name="toolTip">
+               <string>Wykonuje komendę ustaloną w panelu na wybranym kliencie</string>
+              </property>
+              <property name="text">
+               <string>Wykonaj komendę</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="synchronizuj_wszystkie">
+              <property name="toolTip">
+               <string>Wysyła polecenie synchronizacji zmian struktury do wszystkich podłączonych klientów</string>
+              </property>
+              <property name="text">
+               <string>Synchronizuj wszystkie</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="wykonaj_wszystkie">
+              <property name="toolTip">
+               <string>Wykonuje komendę ustaloną w panelu na wszystkich podłączonych klientach</string>
+              </property>
+              <property name="text">
+               <string>Wykonaj na wszystkich</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Hasło instalacji:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="install_pass">
+            <property name="toolTip">
+             <string>Hasło używane przy instalacji klientów</string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_5">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="red_circle">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="resources.qrc">:/loga/red_circle.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="green_circle">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="resources.qrc">:/loga/green_circle.png</pixmap>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="polonczenie_baza">
+              <property name="text">
+               <string>Połączenie z bazą danych</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2" colspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QTextBrowser" name="log"/>
+          </item>
+          <item>
+           <widget class="Line" name="line_7">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="controlbuttons">
+            <item row="5" column="0">
+             <widget class="QPushButton" name="fix_permisions">
+              <property name="toolTip">
+               <string>Naprawia uprawnienia struktury np. po ręcznym dodaniu pliku do struktury na serwerze (spróbuj użyć tej opcji jeżeli niektóre pliki nie skopiowały się podczas synchronizacji)</string>
+              </property>
+              <property name="text">
+               <string>Napraw uprawnienia struktury</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="open_panel">
+              <property name="toolTip">
+               <string>Otwórz panel zarządzający komputerami</string>
+              </property>
+              <property name="text">
+               <string>Panel zarządzania</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="informacje">
+              <property name="toolTip">
+               <string>Informacje o programie oraz twórcach</string>
+              </property>
+              <property name="text">
+               <string>Informacje</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="2">
+             <widget class="Line" name="line_4">
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QPushButton" name="aktualizuj">
+              <property name="toolTip">
+               <string>Aktualizuje klienty oraz serwer do najnowszej wersji programu (jeszcze nie działa)</string>
+              </property>
+              <property name="text">
+               <string>Aktualizuj Pracownię</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

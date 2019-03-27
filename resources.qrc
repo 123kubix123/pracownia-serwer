@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/loga">
+        <file>logo_small.png</file>
+        <file>logo_pracownia.png</file>
+        <file>logo_420x53.png</file>
+        <file>green_circle.png</file>
+        <file>red_circle.png</file>
+    </qresource>
+</RCC>

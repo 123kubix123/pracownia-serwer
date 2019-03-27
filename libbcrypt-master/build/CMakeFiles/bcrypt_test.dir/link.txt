@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall --std=c++11 -O3   CMakeFiles/bcrypt_test.dir/src/main.cpp.o  -o bin/bcrypt_test -rdynamic lib/libbcrypt.so -Wl,-rpath,/home/kubix/Pobrane/libbcrypt-master/build/lib 

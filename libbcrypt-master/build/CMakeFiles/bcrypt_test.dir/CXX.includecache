@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/bcrypt/BCrypt.hpp
+bcrypt.h
+../include/bcrypt/bcrypt.h
+string
+-
+stdexcept
+-
+
+../include/bcrypt/bcrypt.h
+
+/home/kubix/Pobrane/libbcrypt-master/src/main.cpp
+bcrypt/BCrypt.hpp
+/home/kubix/Pobrane/libbcrypt-master/src/bcrypt/BCrypt.hpp
+iostream
+-
+
